@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="assets/js/number-polyfill.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="">
+        <div class="burger"></div>
+        <nav class="navigation container">
+            <ul>
+                <li class="navigation__page-item active"><a href="#personal">Личная информация</a></li>
+                <li class="navigation__page-item"><a href="#exp">Опыт</a></li>
+                <li class="navigation__page-item"><a href="#js">JavaScript</a></li>
+                <li class="navigation__page-item"><a href="#about">О себе</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="top-layer">
+        <img srcset="assets/bg/big.png 1200w, assets/bg/medium.png 728w, assets/bg/small.png 320w" alt="" src="assets/bg/big.png"class="flex-img">
+        <h1 class="heading--big">АНКЕТА</h1>
+    </article>
+    <article class="quest">
+        <form action="" class="container">
+            <section class="personal-info" id="personal">
+                <img src="assets/bg/personal.png" alt="" class="icon">
+                <h2 class="heading">Личная информация</h2>
+                <input type="text" name="name" placeholder="ФИО">
+                <input type="number" min="1920" max="2018" value="1998" name="year" placeholder="Год рождения">
+                <input type="text" name="address" placeholder="Место проживания">
+                <input type="text" name="skype" placeholder="Skype">
+                <input type="text" name="mail" placeholder="E-mail">
+            </section>
+            <section class="expirience" id="exp">
+                <img src="assets/bg/experience.png" alt="" class="icon">
+                <h2 class="heading">Расскажите о своем опыте</h2>
+                <div class="checkbox-grid">
+                    <input type="checkbox" id="metodic">
+                    <label for="metodic">
+                        <div class="square"></div>
+                        <span>БЭМ/OOCSS</span>
+                    </label>
+                    <input type="checkbox" id="preproc">
+                    <label for="preproc">
+                        <div class="square"></div>
+                        <span>Stylus/LESS/SASS</span>
+                    </label>
+                    <input type="checkbox" id="svg">
+                    <label for="svg">
+                        <div class="square"></div>
+                        <span>Работаю с SVG</span>
+                    </label>
+                    <input type="checkbox" id="semantic">
+                    <label for="semantic">
+                        <div class="square"></div>
+                        <span>Верстаю семантично</span>
+                    </label>
+                    <input type="checkbox" id="ecmascript">
+                    <label for="ecmascript">
+                        <div class="square"></div>
+                        <span>ES2015/ES2016</span>
+                    </label>
+                    <input type="checkbox" id="packer">
+                    <label for="packer">
+                        <div class="square"></div>
+                        <span>Gulp/GRUNT</span>
+                    </label>
+                    <input type="checkbox" id="webpack">
+                    <label for="webpack">
+                        <div class="square"></div>
+                        <span>Webpack</span>
+                    </label>
+                    <input type="checkbox" id="jquery">
+                    <label for="jquery">
+                        <div class="square"></div>
+                        <span>jQuery</span>
+                    </label>
+                    <input type="checkbox" id="git">
+                    <label for="git">
+                        <div class="square"></div>
+                        <span>Ипользую Git</span>
+                    </label>
+                </div>
+            </section>
+            <section class="javascript" id="js">
+                <img src="assets/bg/js.png" alt="" class="icon">
+                <h2 class="heading">Уровень владения JavaScript</h2>
+                <div class="span-container">
+                    <span>Не владею</span>
+                    <span>Использую готовые <br> решения</span>
+                    <span>Использую готовые решения и умею переделывать</span>
+                    <span>Пишу сложный JS с нуля</span>
+                </div>
+                <div class="toggle-bar">
+                    <div class="full"></div>
+                </div>
+
+                <div id="posX">
+                    <img src="assets/bg/handler.png" class="ui-widget ui-corner-all ui-state-error">
+                </div>
+            </section>
+            <section class="about" id="about">
+                <img src="assets/bg/about.png" alt="" class="icon">
+                <h2 class="heading">Расскажите о себе</h2>
+                <p class="text">Напишите несколько предложений, чем привлекла наша вакансия
+                    и что вы ожидаете от работы у нас.
+                </p>
+                <textarea name="" id="" placeholder="Тем, что..."></textarea>
+            </section>
+            <button type="submit">Готово</button>
+        </form>
+    </article>
+    <script>
+        $(document).ready(function(){
+            $("form").inputNumber();
+        })
+    </script>
+</body>
+
+</html>
