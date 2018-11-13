@@ -14,6 +14,9 @@ $( function() {
         $(".burger").toggleClass("clicked");
         $("nav").toggleClass("active-nav");
     })
+    $("input[type=number").keyup(function() {
+        $("input[type=number").val(this.value.match(/[0-9]*/));
+    });
     $("a[href^='#']").click(function(e){
         $(".active").removeClass("active");
         $(e.currentTarget).parent("li").addClass("active");
